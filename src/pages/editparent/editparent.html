@@ -60,7 +60,7 @@
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-label>คำนำหน้า</ion-label>
+              <ion-label floating>คำนำหน้า</ion-label>
               <ion-select [(ngModel)]="parent.par_title">
                 <ion-option value="1">นาย</ion-option>
                 <ion-option value="2">นางสาว</ion-option>
@@ -74,14 +74,14 @@
               <ion-input type="text" [(ngModel)]="parent.par_name" value="{{parent.par_name}}"></ion-input>
             </ion-item>
           </ion-col>
+        </ion-row>
+        <ion-row>
           <ion-col>
             <ion-item>
               <ion-label floating>นามสกุล</ion-label>
               <ion-input type="text" [(ngModel)]="parent.par_sname" value="{{parent.par_sname}}"></ion-input>
             </ion-item>
           </ion-col>
-        </ion-row>
-        <ion-row>
           <ion-col>
             <ion-item>
               <ion-label floating>เบอร์โทร</ion-label>
