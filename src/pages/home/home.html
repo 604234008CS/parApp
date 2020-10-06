@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title text-center>
+      เข้าสู่ระบบ
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <form [formGroup]="login" (ngSubmit)="doLogin()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>รหัสผู้ใช้</ion-label>
+        <ion-input type="text" formControlName="par_user" name="par_user" id="par_user"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>พาสเวิร์ด</ion-label>
+        <ion-input type="password" formControlName="par_password" name="par_password" id="par_password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button type="submit" [disabled]="!login.valid" block ion-button color="danger" (click)="logincheck(par_user,par_password)">ล็อคอิน</button>
+
+    </div>
+  </form>
 </ion-content>
